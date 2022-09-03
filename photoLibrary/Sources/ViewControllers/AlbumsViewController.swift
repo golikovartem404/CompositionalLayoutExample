@@ -210,9 +210,7 @@ class AlbumsViewController: UIViewController {
     // MARK: - Actions
 
     @objc func addPhotoAlbum() {
-        
     }
-
 }
 
     // MARK: - Extension
@@ -258,5 +256,10 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: AlbumHeaderReusableView.identifier, for: indexPath) as? AlbumHeaderReusableView
         header?.configure(header: Header.headers[indexPath.section])
         return header ?? AlbumHeaderReusableView()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        print("Нажата ячейка - \(PhotoAlbum.albums[indexPath.section][indexPath.item].title)")
     }
 }
