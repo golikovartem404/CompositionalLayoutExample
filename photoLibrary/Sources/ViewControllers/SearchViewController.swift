@@ -1,21 +1,17 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  photoLibrary
 //
 //  Created by User on 03.09.2022.
 //
 
 import UIKit
-import SnapKit
 
-class AlbumsViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Альбомы"
+        title = "Поиск"
     }
-
-
 }
-
