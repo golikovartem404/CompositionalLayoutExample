@@ -20,6 +20,8 @@ class AlbumsViewController: UIViewController {
                             forCellWithReuseIdentifier: FirstSectionCell.identifier)
         collection.register(SecondSectionCell.self,
                             forCellWithReuseIdentifier: SecondSectionCell.identifier)
+        collection.register(ThirdAndFourthSectionCell.self,
+                            forCellWithReuseIdentifier: ThirdAndFourthSectionCell.identifier)
         collection.dataSource = self
         collection.delegate = self
         return collection
@@ -114,6 +116,32 @@ class AlbumsViewController: UIViewController {
                                                                       bottom: 20,
                                                                       trailing: 10)
                 return layoutSection
+            case 2, 3:
+                let itemSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .fractionalHeight(1)
+                )
+                let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0,
+                                                                   leading: 5,
+                                                                   bottom: 0,
+                                                                   trailing: 0)
+
+                let groupSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .absolute(43)
+                )
+                let layoutGroup = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: groupSize,
+                    subitems: [layoutItem]
+                )
+
+                let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10,
+                                                                      leading: 10,
+                                                                      bottom: 20,
+                                                                      trailing: 0)
+                return layoutSection
             default:
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
@@ -180,6 +208,11 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SecondSectionCell.identifier, for: indexPath) as? SecondSectionCell
             cell?.configure(album: PhotoAlbum.albums[indexPath.section][indexPath.item])
+            return cell ?? UICollectionViewCell()
+        case 2, 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThirdAndFourthSectionCell.identifier, for: indexPath) as? ThirdAndFourthSectionCell
+            cell?.configure(album: PhotoAlbum.albums[indexPath.section][indexPath.item])
+            cell?.numberTitle.text = String(Int.random(in: 80...120))
             return cell ?? UICollectionViewCell()
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
