@@ -14,8 +14,12 @@ class AlbumsViewController: UIViewController {
 
     private lazy var photoCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collection.register(FirstSectionCell.self, forCellWithReuseIdentifier: FirstSectionCell.identifier)
+        collection.register(UICollectionViewCell.self,
+                            forCellWithReuseIdentifier: "cell")
+        collection.register(FirstSectionCell.self,
+                            forCellWithReuseIdentifier: FirstSectionCell.identifier)
+        collection.register(SecondSectionCell.self,
+                            forCellWithReuseIdentifier: SecondSectionCell.identifier)
         collection.dataSource = self
         collection.delegate = self
         return collection
@@ -74,6 +78,33 @@ class AlbumsViewController: UIViewController {
                 let layoutGroup = NSCollectionLayoutGroup.vertical(
                     layoutSize: groupSize,
                     subitem: layoutItem, count: 2
+                )
+
+                let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+                layoutSection.orthogonalScrollingBehavior = .groupPaging
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 5,
+                                                                      leading: 10,
+                                                                      bottom: 20,
+                                                                      trailing: 10)
+                return layoutSection
+            case 1:
+                let itemSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .fractionalHeight(1)
+                )
+                let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5,
+                                                                   leading: 5,
+                                                                   bottom: 5,
+                                                                   trailing: 5)
+
+                let groupSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1/2.15),
+                    heightDimension: .absolute(250)
+                )
+                let layoutGroup = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: groupSize,
+                    subitems: [layoutItem]
                 )
 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
@@ -145,6 +176,10 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
             } else {
                 cell?.numberTitle.text = String(Int.random(in: 35...90))
             }
+            return cell ?? UICollectionViewCell()
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SecondSectionCell.identifier, for: indexPath) as? SecondSectionCell
+            cell?.configure(album: PhotoAlbum.albums[indexPath.section][indexPath.item])
             return cell ?? UICollectionViewCell()
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
