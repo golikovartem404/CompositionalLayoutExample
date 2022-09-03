@@ -244,6 +244,11 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThirdAndFourthSectionCell.identifier, for: indexPath) as? ThirdAndFourthSectionCell
             cell?.configure(album: PhotoAlbum.albums[indexPath.section][indexPath.item])
             cell?.numberTitle.text = String(Int.random(in: 80...120))
+            if (indexPath.section == 2 && indexPath.item == 6) || (indexPath.section == 3 && indexPath.item == 2) {
+                cell?.bottomView.backgroundColor = UIColor.clear
+            } else {
+                cell?.bottomView.backgroundColor = UIColor.systemGray5
+            }
             return cell ?? UICollectionViewCell()
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
