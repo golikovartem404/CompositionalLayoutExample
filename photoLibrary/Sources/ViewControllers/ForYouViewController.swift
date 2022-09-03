@@ -13,6 +13,12 @@ class ForYouViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Для Вас"
+        setupNavigationBar()
     }
+
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
 
 }
