@@ -13,13 +13,13 @@ class ThirdAndFourthSectionCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
-    lazy var icon: UIImageView = {
+    private lazy var icon: UIImageView = {
         let icon = UIImageView()
         icon.tintColor = .systemBlue
         return icon
     }()
 
-    lazy var fileTypeTitle: UILabel = {
+    private lazy var fileTypeTitle: UILabel = {
         let fileTypeTitle = UILabel()
         fileTypeTitle.textColor = .systemBlue
         fileTypeTitle.font = UIFont.systemFont(ofSize: 20)
@@ -33,7 +33,7 @@ class ThirdAndFourthSectionCell: UICollectionViewCell {
         return numberTitle
     }()
 
-    lazy var detailIcon: UIImageView = {
+    private lazy var detailIcon: UIImageView = {
         let detailIcon = UIImageView(image: UIImage(systemName: "chevron.right"))
         detailIcon.tintColor = .gray
         return detailIcon

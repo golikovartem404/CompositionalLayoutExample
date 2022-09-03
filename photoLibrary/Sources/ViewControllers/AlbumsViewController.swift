@@ -22,6 +22,9 @@ class AlbumsViewController: UIViewController {
                             forCellWithReuseIdentifier: SecondSectionCell.identifier)
         collection.register(ThirdAndFourthSectionCell.self,
                             forCellWithReuseIdentifier: ThirdAndFourthSectionCell.identifier)
+        collection.register(AlbumHeaderReusableView.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                            withReuseIdentifier: AlbumHeaderReusableView.identifier)
         collection.dataSource = self
         collection.delegate = self
         return collection
@@ -88,6 +91,16 @@ class AlbumsViewController: UIViewController {
                                                                       leading: 10,
                                                                       bottom: 20,
                                                                       trailing: 10)
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.98),
+                    heightDimension: .estimated(40)
+                )
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
             case 1:
                 let itemSize = NSCollectionLayoutSize(
@@ -115,6 +128,16 @@ class AlbumsViewController: UIViewController {
                                                                       leading: 10,
                                                                       bottom: 20,
                                                                       trailing: 10)
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.98),
+                    heightDimension: .estimated(40)
+                )
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
             case 2, 3:
                 let itemSize = NSCollectionLayoutSize(
@@ -141,6 +164,16 @@ class AlbumsViewController: UIViewController {
                                                                       leading: 10,
                                                                       bottom: 20,
                                                                       trailing: 0)
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .estimated(40)
+                )
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
             default:
                 let itemSize = NSCollectionLayoutSize(
@@ -221,5 +254,9 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
         }
     }
 
-
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: AlbumHeaderReusableView.identifier, for: indexPath) as? AlbumHeaderReusableView
+        header?.configure(header: Header.headers[indexPath.section])
+        return header ?? AlbumHeaderReusableView()
+    }
 }

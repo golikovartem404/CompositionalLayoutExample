@@ -22,6 +22,7 @@
 		9C8EDB6228C30B1C0009E725 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */; };
 		9C8EDB6428C310A00009E725 /* SecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB6328C310A00009E725 /* SecondSectionCell.swift */; };
 		9C8EDB6628C312310009E725 /* ThirdAndFourthSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB6528C312310009E725 /* ThirdAndFourthSectionCell.swift */; };
+		9C8EDB6828C313A20009E725 /* AlbumHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB6728C313A20009E725 /* AlbumHeaderReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
 		9C8EDB6328C310A00009E725 /* SecondSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSectionCell.swift; sourceTree = "<group>"; };
 		9C8EDB6528C312310009E725 /* ThirdAndFourthSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdAndFourthSectionCell.swift; sourceTree = "<group>"; };
+		9C8EDB6728C313A20009E725 /* AlbumHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumHeaderReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */,
 				9C8EDB6328C310A00009E725 /* SecondSectionCell.swift */,
 				9C8EDB6528C312310009E725 /* ThirdAndFourthSectionCell.swift */,
+				9C8EDB6728C313A20009E725 /* AlbumHeaderReusableView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				9C8EDB3B28C303CD0009E725 /* AlbumsViewController.swift in Sources */,
 				9C8EDB5E28C30A1F0009E725 /* AlbumsDescription.swift in Sources */,
 				9C8EDB6428C310A00009E725 /* SecondSectionCell.swift in Sources */,
+				9C8EDB6828C313A20009E725 /* AlbumHeaderReusableView.swift in Sources */,
 				9C8EDB3728C303CD0009E725 /* AppDelegate.swift in Sources */,
 				9C8EDB3928C303CD0009E725 /* SceneDelegate.swift in Sources */,
 			);
