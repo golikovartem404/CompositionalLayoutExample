@@ -19,6 +19,7 @@
 		9C8EDB5B28C3072B0009E725 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB5A28C3072B0009E725 /* SearchViewController.swift */; };
 		9C8EDB5E28C30A1F0009E725 /* AlbumsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB5D28C30A1F0009E725 /* AlbumsDescription.swift */; };
 		9C8EDB6028C30A3F0009E725 /* HeadersDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB5F28C30A3F0009E725 /* HeadersDescription.swift */; };
+		9C8EDB6228C30B1C0009E725 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9C8EDB5A28C3072B0009E725 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9C8EDB5D28C30A1F0009E725 /* AlbumsDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDescription.swift; sourceTree = "<group>"; };
 		9C8EDB5F28C30A3F0009E725 /* HeadersDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersDescription.swift; sourceTree = "<group>"; };
+		9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		9C8EDB4E28C305290009E725 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9C8EDB6128C30B1C0009E725 /* FirstSectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				9C8EDB6028C30A3F0009E725 /* HeadersDescription.swift in Sources */,
 				9C8EDB5B28C3072B0009E725 /* SearchViewController.swift in Sources */,
 				9C8EDB5728C306D70009E725 /* MediaViewController.swift in Sources */,
+				9C8EDB6228C30B1C0009E725 /* FirstSectionCell.swift in Sources */,
 				9C8EDB5928C306F10009E725 /* ForYouViewController.swift in Sources */,
 				9C8EDB3B28C303CD0009E725 /* AlbumsViewController.swift in Sources */,
 				9C8EDB5E28C30A1F0009E725 /* AlbumsDescription.swift in Sources */,

@@ -7,38 +7,38 @@
 
 import Foundation
 
-struct Album {
+struct PhotoAlbum {
     var title: String
     var image: String
 }
 
-extension Album {
+extension PhotoAlbum {
     static var albums = [
         // First section
-        [Album(title: "Недавние", image: "new"),
-         Album(title: "Instagram", image: "insta"),
-         Album(title: "Избранное", image: "izbrannoe"),
-         Album(title: "Lightroom", image: "lightroom"),
-         Album(title: "WhatsApp", image: "whatsapp"),
-         Album(title: "Snapseed", image: "snapseed"),
-         Album(title: "Пленка", image: "plenka"),
-         Album(title: "Путешествия", image: "travel")],
+        [PhotoAlbum(title: "Недавние", image: "new"),
+         PhotoAlbum(title: "Instagram", image: "insta"),
+         PhotoAlbum(title: "Избранное", image: "izbrannoe"),
+         PhotoAlbum(title: "Lightroom", image: "lightroom"),
+         PhotoAlbum(title: "WhatsApp", image: "whatsapp"),
+         PhotoAlbum(title: "Snapseed", image: "snapseed"),
+         PhotoAlbum(title: "Пленка", image: "plenka"),
+         PhotoAlbum(title: "Путешествия", image: "travel")],
         // Second section
-        [Album(title: "Общие фотки", image: "obshee"),
-         Album(title: "Грузия", image: "georgia"),
-         Album(title: "2021", image: "2021"),
-         Album(title: "День рождения", image: "birthday")],
+        [PhotoAlbum(title: "Общие фотки", image: "obshee"),
+         PhotoAlbum(title: "Грузия", image: "georgia"),
+         PhotoAlbum(title: "2021", image: "2021"),
+         PhotoAlbum(title: "День рождения", image: "birthday")],
         // Third section
-        [Album(title: "Видео", image: "video"),
-         Album(title: "Селфи", image: "person.crop.square"),
-         Album(title: "Фото Live Photos", image: "livephoto"),
-         Album(title: "Портреты", image: "cube"),
-         Album(title: "Панорамы", image: "pano"),
-         Album(title: "Таймлапс", image: "timelapse"),
-         Album(title: "Серии", image: "square.3.layers.3d.down.right")],
+        [PhotoAlbum(title: "Видео", image: "video"),
+         PhotoAlbum(title: "Селфи", image: "person.crop.square"),
+         PhotoAlbum(title: "Фото Live Photos", image: "livephoto"),
+         PhotoAlbum(title: "Портреты", image: "cube"),
+         PhotoAlbum(title: "Панорамы", image: "pano"),
+         PhotoAlbum(title: "Таймлапс", image: "timelapse"),
+         PhotoAlbum(title: "Серии", image: "square.3.layers.3d.down.right")],
         // Fourth section
-        [Album(title: "Импортированные", image: "square.and.arrow.down"),
-         Album(title: "Скрытые", image: "eye.slash"),
-         Album(title: "Недавно удаленные", image: "trash")]
+        [PhotoAlbum(title: "Импортированные", image: "square.and.arrow.down"),
+         PhotoAlbum(title: "Скрытые", image: "eye.slash"),
+         PhotoAlbum(title: "Недавно удаленные", image: "trash")]
     ]
 }
