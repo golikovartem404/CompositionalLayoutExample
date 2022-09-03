@@ -13,6 +13,11 @@ class MediaViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Медиатека"
+        setupNavigationBar()
+    }
+
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }
