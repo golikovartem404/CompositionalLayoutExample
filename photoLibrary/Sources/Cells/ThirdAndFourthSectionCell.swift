@@ -48,6 +48,11 @@ class ThirdAndFourthSectionCell: UICollectionViewCell {
         return stackView
     }()
 
+    lazy var bottomView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     // MARK: - Lifecycle
 
     override init(frame: CGRect) {
@@ -68,6 +73,7 @@ class ThirdAndFourthSectionCell: UICollectionViewCell {
         contentView.addSubview(fileTypeTitle)
         contentView.addSubview(numberTitle)
         contentView.addSubview(detailIcon)
+        contentView.addSubview(bottomView)
     }
 
     func setupLayouts() {
@@ -89,6 +95,12 @@ class ThirdAndFourthSectionCell: UICollectionViewCell {
         detailIcon.snp.makeConstraints { make in
             make.centerY.equalTo(self)
             make.left.equalTo(numberTitle.snp.right).offset(10)
+        }
+
+        bottomView.snp.makeConstraints { make in
+            make.bottom.equalTo(self)
+            make.height.equalTo(1)
+            make.width.equalTo(contentView).offset(20)
         }
     }
 
