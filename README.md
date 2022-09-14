@@ -2,4 +2,6 @@
 
 This is a clone of the standard iOS photo library (educational project)
 
-![Simulator Screen Shot - iPhone 11 - 2022-09-14 at 14 46 39](https://user-images.githubusercontent.com/109585128/190134409-98cb8e30-ee65-47de-aefb-a8586a561c92.png)
+![imgonline-com-ua-Resize-AYPNMrURhpZcD](https://user-images.githubusercontent.com/109585128/190136691-2175d6ec-e081-4ca3-b9c8-985bc19bbf9f.jpg)
+
+![imgonline-com-ua-Resize-l0ewQtJmTVeewzJ](https://user-images.githubusercontent.com/109585128/190136843-fcfc972e-f899-4146-8e68-eda04a36f1ea.jpg)
